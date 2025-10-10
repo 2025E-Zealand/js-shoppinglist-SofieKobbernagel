@@ -36,6 +36,19 @@ function CreateLiElement(itemId, className, item){
     return li;
 }
 
+function ChangeClass(itemId,newClass){
+    let item = document.getElementById(itemId)
+    item.setAttribute("class",newClass)
+    return item
+}
+
 let newli = CreateLiElement("4","healthy","Milk");
 console.log("New li element:");
 console.log(newli);
+
+// Add the new <li> to the DOM, e.g., to the body or a <ul> element
+document.body.appendChild(newli);
+
+ChangeClass(2,"healthy");
+console.log("Item class changed:");
+console.log(document.getElementById(2));
